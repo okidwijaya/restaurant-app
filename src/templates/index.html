@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Restaurant Apps Starter Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- NAV BAR -->
+    <nav class="topnav" id="myTopnav">
+        <a href="/" class="logo_icon">
+            <img src="images/Hunger Apps.png" alt="logo" width="100px" min-height="44px">
+        </a>
+        <a href="/">Home</a>
+        <a href="#">Favourites</a>
+        <a href="https://www.linkedin.com/in/okidwijaya/">About Us</a>
+        <a href="javascript:void(0);" class="icon" onclick="hamburger()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+
+    <!-- MAIN SECTION -->
+    <main>
+        <div class="jumbotron">
+            <h1 class="jumbotron-title">Be The Fastest<br>In Deliverings<br>Your <span class="red">Food</span></h1>
+        </div>
+
+        <div class="wrapper">
+            <h1>Explore Restaurant</h1>
+            <div class="container" id="data-card">
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Copyright © 2020 - Hunger Apps</p>
+    </footer>
+
+    <script>
+        function hamburger() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+
+</html>
