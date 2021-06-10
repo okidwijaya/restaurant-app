@@ -1,26 +1,7 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
-import '../DATA.json';
-
-console.log('Hello Coders! :)');
-
-// const hamburgerButtonElement = document.querySelector("#hamburger");
-// const drawerElement = document.querySelector("#drawer");
-// const mainElement = document.querySelector("main");
-
-// hamburgerButtonElement.addEventListener("click", event => {
-//     drawerElement.classList.toggle("open");
-//     event.stopPropagation();
-// });
-
-
-// mainElement.addEventListener("click", event => {
-//     drawerElement.classList.remove("open");
-//     event.stopPropagation();
-// })
 
 import ('../DATA.json').then(({ default: jsonData }) => {
-    console.log(jsonData)
     let dataRestaurant = jsonData['restaurants']
     let dataList = '';
     dataRestaurant.forEach(function(data) {
