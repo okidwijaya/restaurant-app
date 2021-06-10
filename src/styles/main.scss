@@ -18,33 +18,38 @@
             font-family: 'Padauk', sans-serif;
         }
         
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            padding: 8px;
+            z-index: 100;
+        }
+        
+        .skip-link:focus {
+            top: 0;
+        }
+        
         .topnav {
             overflow: hidden;
-            background-color: rgb(255, 255, 255);
-            margin: auto 50px;
+            background-color: $primary-color;
+            padding: 15px 50px;
             a {
-                float: right;
-                display: block;
-                color: black;
+                color: $text-color;
                 text-align: center;
                 padding: 14px 16px;
                 text-decoration: none;
                 font-size: 17px;
-                min-height: 44px;
                 min-width: 44px;
-                right: 0;
+                min-height: 44px;
             }
-            a:hover {
-                color: black;
+            .topnav-right {
+                float: right;
+                a:hover {
+                    border-bottom: 1px solid $text-color;
+                }
             }
-            a.active {
-                background-color: #bbbbbb;
-                color: white;
-            }
-            .logo_icon {
-                float: left;
-            }
-            .icon {
+            .menu-bars {
                 display: none;
             }
         }
@@ -139,28 +144,28 @@
         }
         
         @media screen and (min-width:360px) and (max-width: 600px) {
-            .topnav a:not(:first-child) {
-                display: none;
+            .logo img {
+                padding-top: 10px;
             }
-            .topnav a.icon {
-                float: right;
-                display: block;
-                min-width: 44px;
-                min-height: 44px;
-                margin: auto;
+            .topnav-right {
+                a {
+                    display: none;
+                }
+                .menu-bars {
+                    display: block;
+                }
             }
-            .topnav.responsive {
+            .topnav-right.responsive {
                 position: relative;
             }
-            .topnav.responsive .icon {
+            .topnav-right.responsive.menu-bars {
                 position: absolute;
                 right: 0;
                 top: 0;
             }
-            .topnav.responsive a {
-                float: none;
+            .topnav-right.responsive a {
                 display: block;
-                text-align: left;
+                text-align: center;
             }
             main .jumbotron {
                 height: 400px;
