@@ -37,14 +37,14 @@
             a {
                 color: $text-color;
                 text-align: center;
-                padding: 14px 16px;
+                padding: 10px;
                 text-decoration: none;
                 font-size: 17px;
+                font-weight: 400;
                 min-width: 44px;
                 min-height: 44px;
             }
             .topnav-right {
-                float: right;
                 a:hover {
                     border-bottom: 1px solid $text-color;
                 }
@@ -52,6 +52,12 @@
             .menu-bars {
                 display: none;
             }
+        }
+        
+        .nav-flexbox {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         
         main {
@@ -144,9 +150,6 @@
         }
         
         @media screen and (min-width:360px) and (max-width: 600px) {
-            .logo img {
-                padding-top: 10px;
-            }
             .topnav-right {
                 a {
                     display: none;
@@ -160,12 +163,12 @@
             }
             .topnav-right.responsive.menu-bars {
                 position: absolute;
-                right: 0;
-                top: 0;
             }
             .topnav-right.responsive a {
                 display: block;
-                text-align: center;
+            }
+            .nav-flexbox {
+                align-items: flex-start;
             }
             main .jumbotron {
                 height: 400px;
